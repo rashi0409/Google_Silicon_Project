@@ -11,7 +11,7 @@ This project extracts key structural and logical features from Verilog files and
 ### 1. Feature Extraction
 - Analyze RTL files to extract key components:
   - Logic gates (AND, OR, XOR, NAND, NOR, etc.)
-  - Flip-flops, input/output ports, assignments, and always blocks
+  - Input/output ports, assignments, and always blocks
 - Store extracted features in a structured dataset
 
 ### 2. Dataset Creation
@@ -35,7 +35,7 @@ This project extracts key structural and logical features from Verilog files and
 ### 1. Extract Features from RTL Files
 - Parse RTL files and count logical elements:
   - AND, OR, XOR, NAND, NOR, etc.
-- Identify structural components such as always blocks, flip-flops, and assignments
+- Identify structural components such as always blocks, and assignments
 
 ### 2. Train the Machine Learning Model
 - Use **Random Forest Regressor** for training
