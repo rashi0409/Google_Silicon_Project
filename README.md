@@ -11,16 +11,17 @@ This project extracts key structural and logical features from Verilog files and
 ### 1. Feature Extraction
 - Analyze RTL files to extract key components:
   - Logic gates (AND, OR, XOR, NAND, NOR, etc.)
-  - Flip-flops, input/output ports, assignments, and always blocks
+  - Input/output ports, assignments, and always blocks
 - Generate **timing and netlist reports** using **Vivado** to obtain:
   - **Combinational Depth**
   - **Datapath Delay**
   - **Slack**
-- Store extracted features in a structured dataset
+- **Combinational depth values are manually extracted from Vivado reports and entered into the dataset during dataset creation.**
 
 ### 2. Dataset Creation
-- Generate a dataset by extracting features from multiple RTL designs
-- Associate each design with its known combinational depth
+- Extract features from multiple RTL designs
+- **Manually enter the combinational depth from Vivado reports into the dataset**
+- Store extracted features along with combinational depth for model training
 
 ### 3. Model Training
 - Use a **Random Forest Regressor** to learn patterns between extracted features and combinational depth
@@ -39,9 +40,10 @@ This project extracts key structural and logical features from Verilog files and
 ### 1. Extract Features from RTL Files
 - Parse RTL files and count logical elements:
   - AND, OR, XOR, NAND, NOR, etc.
-- Identify structural components such as always blocks, flip-flops, and assignments
+- Identify structural components such as always blocks, and assignments
 - Extract **datapath delay and slack** from **Vivado's timing report**
 - Extract **gate types and structure** from **Vivado's netlist report**
+- **Manually extract combinational depth from Vivado and enter it in the dataset**
 
 ### 2. Train the Machine Learning Model
 - Use **Random Forest Regressor** for training
