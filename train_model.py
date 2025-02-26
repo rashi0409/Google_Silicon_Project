@@ -19,4 +19,4 @@ model.fit(X_train, y_train)
 # Save the model
 joblib.dump(model, "depth_prediction_model.pkl")
 
-print("✅ Model trained & saved successfully!")
+print("Model trained & saved successfully!")
